@@ -6,7 +6,7 @@
         {
             "label": "sass compile",
             "type": "shell",
-            "command": "sass asset/styles/scss/theme.scss asset/styles/css/theme.css --watch",
+            "command": "sass ./asset/styles/scss:./asset/styles/css --watch --no-source-map",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
