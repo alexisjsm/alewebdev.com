@@ -185,11 +185,16 @@ nav.navbar ul li a {
   }
   section#about div.content-text {
     align-self: center;
-    flex: 1 0 50%;
-    padding: 1rem;
+    flex: 1 0 320px;
+    padding: 100px;
+  }
+  section#about div.content-text p {
+    margin-bottom: 1em;
+    line-height: 2em;
   }
   section#about div.content-image {
     align-self: center;
+    flex: 1 0 30%;
   }
   section#about div.content-image img {
     max-width: 100%;
@@ -292,6 +297,10 @@ nav.navbar ul li a {
   border-bottom: 2px solid #088a7d;
 }
 
+div.content-text {
+  text-align: justify;
+}
+
 .not-border {
   border: none;
 }
@@ -335,5 +344,3 @@ nav.navbar ul li a {
 .color--cancel:active {
   background: #FFCDD2;
 }
-
-/*# sourceMappingURL=theme.css.map */
