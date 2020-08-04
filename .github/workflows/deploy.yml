@@ -16,7 +16,7 @@ jobs:
                                   source: "."
                                   target: "/var/www/alewebdev.com"
                         - name: Create css folder
-                          run: mkdir -vp asset/styles/css
+                          run: mkdir -vp asset/styles/css 
                         - name: Sass compile theme.scss
                           uses: gha-utilities/sass-build@v0.2.5
                           with:
