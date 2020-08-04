@@ -1,0 +1,27 @@
+name: Deploy
+on: [push]
+jobs:
+        build:
+                runs-on: ubuntu-latest
+                steps:
+                        - uses: actions/checkout@v1
+                        - name: Copy repository contents via scp
+                          uses: appleboy/scp-action@master
+                          env:
+                                  HOST: ${{ secrets.HOST }}
+                                  USERNAME: ${{ secrets.USERNAME }}
+                                  PORT: ${{ secrets.PORT }}
+                                  KEY: ${{ secrets.SSHKEYS }}
+                          with:
+                                  source: "."
+                                  target: "/var/www/alewebdev.com"
+                        - name: Sass compile theme.scss
+                          uses: gha-utilities/sass-build@v0.2.5
+                          with:
+                                  source: asset/styles/scss/theme.scss
+                                  destination: asset/styles/css/theme.css
+                        - name: Sass compile error_pages.scss
+                          uses: gha-utilities/sass-build@v0.2.5
+                          with:
+                                  source: asset/styles/scss/error_page.scss
+                                  destination: asset/styles/css/error_page.css
