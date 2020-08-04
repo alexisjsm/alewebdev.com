@@ -14,7 +14,9 @@ jobs:
                                   KEY: ${{ secrets.SSHKEYS }}
                           with:
                                   source: "."
-                                  target: "/var/www/"
+                                  target: "/var/www/alewebdev.com"
+                        - name: Create css folder
+                          run: mkdir -vp asset/styles/css
                         - name: Sass compile theme.scss
                           uses: gha-utilities/sass-build@v0.2.5
                           with:
