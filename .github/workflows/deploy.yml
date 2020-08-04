@@ -15,17 +15,10 @@ jobs:
                           with:
                                   source: "."
                                   target: "/var/www/alewebdev.com"
-                        - name: "list folder"
-                          run: ls
-                        - name: Create css folder
-                          run: mkdir -vp ./asset/styles/css
-                        - name: Sass compile theme.scss
-                          uses: gha-utilities/sass-build@v0.2.5
+                        - name: 'install Nodejs'
+                          uses: actions/setup-node@v1
                           with:
-                                  source: ./asset/styles/scss/theme.scss
-                                  destination: ./asset/styles/css/theme.css
-                        - name: Sass compile error_pages.scss
-                          uses: gha-utilities/sass-build@v0.2.5
-                          with:
-                                  source: ./asset/styles/scss/error_page.scss
-                                  destination: ./asset/styles/css/error_page.css
+                                node-version: 12.x
+                        - name: installing dependencies
+                        - run: npm install
+                        - run: npm run build

@@ -1,0 +1,23 @@
+{
+  "name": "alewebdev.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass ./asset/styles/scss:./asset/styles/css --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexisjsm/alewebdev.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexisjsm/alewebdev.com/issues"
+  },
+  "homepage": "https://github.com/alexisjsm/alewebdev.com#readme",
+  "dependencies": {
+    "sass": "^1.26.10"
+  }
+}
