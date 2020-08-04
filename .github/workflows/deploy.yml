@@ -14,7 +14,7 @@ jobs:
                                   KEY: ${{ secrets.SSHKEYS }}
                           with:
                                   source: "."
-                                  target: "/var/www/"
+                                  target: "/var/www/alewebdev.com"
                         - name: Sass compile theme.scss
                           uses: gha-utilities/sass-build@v0.2.5
                           with:
