@@ -14,12 +14,12 @@ jobs:
                                   KEY: ${{ secrets.SSHKEYS }}
                           with:
                                   source: "."
-                                  target: "/var/www/alewebdev.com"
+                                  target: "/var/www/alewebdev.com "
                         - name: 'install Nodejs'
                           uses: actions/setup-node@v1
                           with:
                                 node-version: '12.x'
                         - name: installing dependencies
-                          run: npm install
+                          run: npm ci
                         - name: building 
-                          run: npm run build
+                          run: npm run build --if-present
