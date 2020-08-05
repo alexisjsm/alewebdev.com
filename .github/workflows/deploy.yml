@@ -1,11 +1,26 @@
 name: Deploy
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 jobs:
-  build:
+  test: 
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
+    steps:
+      - name: "install Nodejs ${{ matrix.node-version }}"
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build --if-present
+        env:
+          CI: true
+  build:
+    needs: [test]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: Copy repository contents via scp
@@ -18,9 +33,8 @@ jobs:
         with:
           source: "."
           target: "/var/www/alewebdev.com"
-      - name: "install Nodejs ${{ matrix.node-version }}"
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build --if-present
+      - name: "Compile sass"
+        run: |
+          npm ci
+          npm run build    
+          
