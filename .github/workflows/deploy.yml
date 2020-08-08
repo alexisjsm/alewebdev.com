@@ -34,8 +34,14 @@ jobs:
         with:
           source: "."
           target: "/var/www/alewebdev.com"
-      - name: "Compile sass"
-        run: |
-          npm ci
-          npm run build    
+      - uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.SSHKEYS }}
+          script: |
+              pwd
+              npm ci
+              npm run build
           
