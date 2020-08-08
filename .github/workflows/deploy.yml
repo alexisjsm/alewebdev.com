@@ -42,6 +42,7 @@ jobs:
           KEY: ${{ secrets.SSHKEYS }}
           script: |
               pwd
+              cd /var/www/alewebdev.com
               npm ci
               npm run build
           
