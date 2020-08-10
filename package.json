@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "sass ./asset/styles/scss:./asset/styles/css --no-source-map"
+    "build": "sass ./asset/styles/scss:./asset/styles/css --no-source-map",
+    "dev": "sass ./asset/styles/scss:./asset/styles/css --no-source-map --watch"
   },
   "repository": {
     "type": "git",
