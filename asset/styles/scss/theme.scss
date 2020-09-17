@@ -112,21 +112,31 @@ nav.navbar{
 
     header {
         nav.navbar {
-                li{
-                    margin: 10px auto;
-                    display: block;
-                    padding: 1em; 
-                }
+            li{
+                margin: 10px auto;
+                display: block;
+                padding: 1em; 
+            }
         }
     }
 
     #about {
+        margin-top: 1rem;
         justify-content: center;
         align-content: center;
         .content-text {
+            
             align-self: center;
             flex: 1 0 50%;
             padding: 1rem;
+        }
+        .content-image {
+            text-align: center;
+            img{
+                border-radius: 360px;
+                width: 420px;
+                max-width: 75%;
+            }
         }
     }
 
@@ -201,10 +211,15 @@ nav.navbar{
             }
         }
         div.content-image {
-            flex: 1 0 320px;
+            flex: 1 0 500px;
             align-self: center;
+            text-align: center;
+            img {
+                border-radius: 360px;
+                max-width: 75%;
+                width: 500px;
+            }
         }
-
     }
 
     
