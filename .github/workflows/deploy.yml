@@ -33,7 +33,7 @@ jobs:
           script: |
               pwd
               cd /var/www/alewebdev.com
-              git push origin
+              git push origin master
               npm ci
               npm run build
           
