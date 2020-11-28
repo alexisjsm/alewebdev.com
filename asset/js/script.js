@@ -10,6 +10,15 @@ window.onscroll = () => {
 (
   document.getElementById('top').addEventListener('click', (ev) => {
     ev.preventDefault()
-    window.scrollTo(0, 0)
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
   })
 )
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});

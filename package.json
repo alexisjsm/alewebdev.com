@@ -1,7 +1,7 @@
 {
-  "name": "alewebdev.com",
-  "version": "1.0.0",
-  "description": "",
+  "name": "alewebdev",
+  "version": "1.5.0",
+  "description": "personal website",
   "main": "index.html",
   "scripts": {
     "build": "sass ./asset/styles/scss:./asset/styles/css --no-source-map",
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/alexisjsm/alewebdev.com.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "alexisjsm",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexisjsm/alewebdev.com/issues"
   },
