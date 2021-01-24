@@ -4,8 +4,8 @@
   "description": "personal website",
   "main": "index.html",
   "scripts": {
-    "build": "wepack --mode production",
-    "dev": "snowpack dev"
+    "build": "snowpack build",
+    "dev": "postcss ./src/styles/index.css"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,7 @@
     "autoprefixer": "^10.2.1",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
-    "postcss-nested": "^5.0.3",
-    "rollup": "^2.36.2",
-    "webpack-cli": "^4.3.1"
+    "postcss-nested": "^5.0.3"
   },
   "dependencies": {}
 }
