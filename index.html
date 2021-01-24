@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="/asset/image/favicon.ico" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Alexis Jesus Sierra: Development Web 👨‍💻" />
+  <meta name="description" content="Desarrollador web: Javascript | Vue | Express" />
+  <meta property="og:title" content="Alexis Jesus Sierra: Development Web 👨‍💻" />
+  <meta property="og:description" content="Desarrollador web: Javascript| Vue| Express " />
+  <meta property="og:image" content="/asset/image/logo.png" />
+  <meta property="og:url" content="https://alewebdev.com" />
+  <meta property="twitter:site" content="@Ryksu" />
+  <meta property="twitter:description" content="Desarrollador web" />
+  <meta property="twitter:image" content="/asset/image/logo.png" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16432318-8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-16432318-8");
+  </script>
+  <link rel="stylesheet" href="./asset/css/index.css" />
+  <script src="https://kit.fontawesome.com/f1a02ac789.js" crossorigin="anonymous"></script>
+  <title>Alexis Jesus Sierra: Development Web 👨‍💻</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="profile">
+        <div class="profile__content">
+          <img class="profile__content-image" src="./asset/image/profile.jpg" alt="profile" />
+        </div>
+        <div class="profile__head">
+          <h1 class="profile__head-title">Hi! I'm Alexis Jesus</h1>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__list-btn-navbar">
+            <a class="navbar__list-btn-navbar-link" href="#about">
+              <i class="far fa-user"></i>
+              About
+            </a>
+          </li>
+          <li class="navbar__list-btn-navbar">
+            <a class="navbar__list-btn-navbar-link" href="#portfolio">
+              <i class="fas fa-code"></i>
+              Portfolio
+            </a>
+          </li>
+          <li class="navbar__list-btn-navbar">
+            <a class="navbar__list-btn-navbar-link" href="https://blog.alewebdev.com" target="_blank">
+              <i class="fas fa-laptop-code"></i>
+              Blog
+            </a>
+          </li>
+          <li class="navbar__list-btn-navbar">
+            <a class="navbar__list-btn-navbar-link" href="#contact">
+              <i class="fas fa-address-card"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <section id="about" class="about">
+        <div class="about__body">
+          <p class="about__text">
+            ¡Hola! me llamo Alexis Jesús, Soy desarrollador.
+            Desde pequeño me apasiona las nuevas tecnologías👨🏽‍💻, de
+            esta forma, he orientado mi carrera al desarrollador Web,
+            destacando Javascript con Vuejs.
+          </p>
+          <p class="about__text">
+            Mis hobbies, además de programar, me encanta viajar🛫 y conocer
+            otras ciudades, como también los videojuegos🎮, atracarme de series o ir
+            al cine🎥, mis categorías favoritas es la ciencia-ficción y terror/misterio.
+          </p>
+        </div>
+      </section>
+      <section id="portfolio" class="portfolio">
+        <div class="portfolio__body">
+          <div class="card">
+            <div class="card__body">
+              <img class="card__image overlay__img" src="./asset/image/vBoard.gif" alt="" srcset="">
+              <div class="overlay">
+                <div class="overlay__head">
+                  <h3 class="overlay__head-title">vBoard</h3>
+                </div>
+                <div class="overlay__body">
+                  <a class="overlay__btn" href="http://" target="_blank" rel="noopener noreferrer">Ver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__body">
+              <img class="card__image overlay__img" src="./asset/image/Rpinfo.gif" alt="">
+              <div class="overlay">
+                <div class="overlay__head">
+                  <h3 class="overlay__head-title">Rpinfo</h3>
+                </div>
+                <div class="overlay__body">
+                  <a  class="overlay__btn" href="http://" target="_blank" rel="noopener noreferrer">Ver</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div id="email">
+          <a class="btn-email" href="mailto:contact@alewebdev.com">Contactame! 📧</a>
+        </div>
+        <div id="social">
+          <div class="social__header">
+            <h2 class="social__title">Sígueme en:</h2>
+          </div>
+          <nav class="navbar">
+            <ul class="navbar__list">
+              <li class="navbar__list-btn-navbar">
+                <a class="navbar__list-btn-navbar-link --btn-github" href="https://github.com/alexisjsm"
+                  target="_blank">
+                  <i class="fab fa-github"></i>
+                  Github
+                </a>
+              </li>
+              <li class="navbar__list-btn-navbar">
+                <a class="navbar__list-btn-navbar-link --btn-linkedin" href="https://www.linkedin.com/in/alexisjsm/"
+                  target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                  Linkedin
+                </a>
+              </li>
+              <li class="navbar__list-btn-navbar">
+                <a class="navbar__list-btn-navbar-link --btn-twitter" href="https://twitter.com/Ryksu" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <div class="btn-top">
+      <button id="top" class="btn-top__btn" name="top" hidden>
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+    <script type="module" src="./asset/js/script.js"></script>
+  </div>
+</body>
+</html>

@@ -4,8 +4,10 @@
   "description": "personal website",
   "main": "index.html",
   "scripts": {
-    "build": "snowpack build",
-    "dev": "postcss ./src/styles/index.css"
+    "build": "npm run postcss:build",
+    "dev": "servor --reload --browse & npm run postcss:watch",
+    "postcss:watch": "postcss ./asset/styles/index.css --dir ./asset/css -w",
+    "postcss:build": "postcss ./asset/styles/index.css --dir ./asset/css"
   },
   "repository": {
     "type": "git",
@@ -20,9 +22,11 @@
   "homepage": "https://github.com/alexisjsm/alewebdev.com#readme",
   "devDependencies": {
     "autoprefixer": "^10.2.1",
+    "htmlhint": "^0.14.2",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
-    "postcss-nested": "^5.0.3"
+    "postcss-nested": "^5.0.3",
+    "servor": "^4.0.2"
   },
   "dependencies": {}
 }
