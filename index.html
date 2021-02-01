@@ -57,15 +57,15 @@
             </a>
           </li>
           <li class="navbar__list-btn-navbar">
-            <a class="navbar__list-btn-navbar-link" href="https://blog.alewebdev.com" target="_blank">
-              <i class="fas fa-laptop-code"></i>
-              Blog
-            </a>
-          </li>
-          <li class="navbar__list-btn-navbar">
             <a class="navbar__list-btn-navbar-link" href="#contact">
               <i class="fas fa-address-card"></i>
               Contact
+            </a>
+          </li>
+          <li class="navbar__list-btn-navbar">
+            <a class="navbar__list-btn-navbar-link" href="https://blog.alewebdev.com" target="_blank">
+              <i class="fas fa-laptop-code"></i>
+              Blog
             </a>
           </li>
         </ul>
@@ -91,13 +91,15 @@
         <div class="portfolio__body">
           <div class="card">
             <div class="card__body">
-              <img class="card__image overlay__img" src="./asset/image/vBoard.gif" alt="" srcset="">
+              <img class="card__image" src="./asset/image/vBoard.gif" alt="" srcset="">
               <div class="overlay">
                 <div class="overlay__head">
                   <h3 class="overlay__head-title">vBoard</h3>
                 </div>
                 <div class="overlay__body">
-                  <a class="overlay__btn" href="http://" target="_blank" rel="noopener noreferrer">Ver</a>
+                  <div class="overlay__btn">
+                    <a class="overlay__btn-link" href="http://" target="_blank" rel="noopener noreferrer">Ver</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -105,13 +107,15 @@
 
           <div class="card">
             <div class="card__body">
-              <img class="card__image overlay__img" src="./asset/image/Rpinfo.gif" alt="">
+              <img class="card__image" src="./asset/image/Rpinfo.gif" alt="">
               <div class="overlay">
                 <div class="overlay__head">
                   <h3 class="overlay__head-title">Rpinfo</h3>
                 </div>
                 <div class="overlay__body">
-                  <a  class="overlay__btn" href="http://" target="_blank" rel="noopener noreferrer">Ver</a>
+                  <div class="overlay__btn">
+                    <a class="overlay__btn-link" href="http://" target="_blank" rel="noopener noreferrer">Ver</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -119,37 +123,42 @@
         </div>
       </section>
       <section id="contact" class="contact">
-        <div id="email">
-          <a class="btn-email" href="mailto:contact@alewebdev.com">Contactame! 📧</a>
-        </div>
-        <div id="social">
-          <div class="social__header">
-            <h2 class="social__title">Sígueme en:</h2>
+        <div class="email">
+          <div class="email__btn">
+            <a class="email__btn-email" href="mailto:contact@alewebdev.com">Contáctame! 📧</a>
           </div>
-          <nav class="navbar">
-            <ul class="navbar__list">
-              <li class="navbar__list-btn-navbar">
-                <a class="navbar__list-btn-navbar-link --btn-github" href="https://github.com/alexisjsm"
-                  target="_blank">
-                  <i class="fab fa-github"></i>
-                  Github
-                </a>
-              </li>
-              <li class="navbar__list-btn-navbar">
-                <a class="navbar__list-btn-navbar-link --btn-linkedin" href="https://www.linkedin.com/in/alexisjsm/"
-                  target="_blank">
-                  <i class="fab fa-linkedin"></i>
-                  Linkedin
-                </a>
-              </li>
-              <li class="navbar__list-btn-navbar">
-                <a class="navbar__list-btn-navbar-link --btn-twitter" href="https://twitter.com/Ryksu" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                  Twitter
-                </a>
-              </li>
-            </ul>
-          </nav>
+        </div>
+        <div id="social" class="social">
+          <div class="social__head">
+            <h2 class="social__head-title">Sígueme en:</h2>
+          </div>
+          <div class="social__body">
+            <nav class="navbar">
+              <ul class="navbar__list">
+                <li class="navbar__list-btn-navbar">
+                  <a class="navbar__list-btn-navbar-link --btn-github" href="https://github.com/alexisjsm"
+                    target="_blank">
+                    <i class="fab fa-github"></i>
+                    Github
+                  </a>
+                </li>
+                <li class="navbar__list-btn-navbar">
+                  <a class="navbar__list-btn-navbar-link --btn-linkedin" href="https://www.linkedin.com/in/alexisjsm/"
+                    target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    Linkedin
+                  </a>
+                </li>
+                <li class="navbar__list-btn-navbar">
+                  <a class="navbar__list-btn-navbar-link --btn-twitter" href="https://twitter.com/Ryksu" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
         </div>
       </section>
     </main>
@@ -161,4 +170,5 @@
     <script type="module" src="./asset/js/script.js"></script>
   </div>
 </body>
+
 </html>
