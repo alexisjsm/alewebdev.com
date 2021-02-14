@@ -6,6 +6,7 @@
   --color-twitter: #1da1f2;
   --color-linkedin: #0e76a8;
   --color-github: #333;
+  --font-size: clamp(1.2rem, 1vw, 1.5rem);
 }
 
 * {
@@ -73,10 +74,10 @@ svg {
     list-style: none;
     &-btn-navbar {
       display: block;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       &-link {
         padding: 0.2rem;
-        font-size: clamp(1.2rem, 1vw, 1.5rem);
+        font-size: var(--font-size);
         color: var(--color-primary);
         text-decoration: none;
         &:hover {
@@ -110,12 +111,11 @@ svg {
   align-items: center;
   &__body {
     display: block;
-    text-align: justify;
     padding: 1rem;
     @media screen and (min-width: 920px) {
       width: 50%;
-      font-size: 1.2rem;
-      text-align: justify;
+      font-size: var(--font-size);
+      word-wrap: break-word;
     }
   }
   &__text {
