@@ -6,24 +6,22 @@
   --color-twitter: #1da1f2;
   --color-linkedin: #0e76a8;
   --color-github: #333;
-  --md: 720px;
-  --lg: 1024px;
-  --xl: 1440px;
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto Mono", monospace;
-  font-size: 16px;
 }
-img {
+img,
+svg {
   max-width: 100%;
 }
 
 .wrapper {
-    display: grid;
-    grid-template-rows: repeat(2, 100vh);
+  display: grid;
+  grid-template-rows: repeat(2, 100vh);
+  padding: 1rem;
 }
 
 .header {
@@ -31,7 +29,6 @@ img {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 0.2rem;
 }
 
 .profile {
@@ -41,20 +38,36 @@ img {
   &__head {
     text-align: center;
     &-title {
-      font-size: 3rem;
+      padding: 1rem;
+      font-size: clamp(2rem, 3vw, 4rem);
+    }
+  }
+  &__body {
+  }
+  &__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &-element {
+      width: 32px;
+      &-image {
+        object-fit: cover;
+      }
     }
   }
   &__content {
     text-align: center;
     &-image {
       border-radius: 100%;
-      max-width: 50%;
-      width: 250px;
+      max-width: 100%;
+      width: 15rem;
     }
   }
 }
 
 .navbar {
+  margin-top: 1rem;
   align-self: center;
   &__list {
     list-style: none;
@@ -63,13 +76,24 @@ img {
       margin-bottom: 0.8rem;
       &-link {
         padding: 0.2rem;
-        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 1vw, 1.5rem);
         color: var(--color-primary);
         text-decoration: none;
         &:hover {
           border-bottom: 2px solid var(--color-primary);
         }
       }
+    }
+  }
+}
+
+.emoji {
+  margin-top: 1rem;
+  &__body {
+    text-align: center;
+    &-text {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      animation: down-to-top 0.5s ease-in-out alternate infinite;
     }
   }
 }
@@ -86,6 +110,13 @@ img {
   align-items: center;
   &__body {
     display: block;
+    text-align: justify;
+    padding: 1rem;
+    @media screen and (min-width: 920px) {
+      width: 50%;
+      font-size: 1.2rem;
+      text-align: justify;
+    }
   }
   &__text {
     padding: 1rem;
@@ -96,7 +127,7 @@ img {
   &__body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 6px;
+    gap: 1rem;
     padding: 0.4rem;
   }
 }
@@ -117,17 +148,17 @@ img {
 .email {
   &__btn {
     &-email {
-      font-size: 2.5rem;
+      font-size: clamp(2rem, 2vw, 8rem);
+      text-align: center;
       text-decoration: none;
       color: var(--color-primary);
-      padding: .4rem;
+      padding: 0.4rem;
       &:hover {
         text-decoration: underline;
       }
     }
   }
 }
-
 
 .--btn {
   &-twitter:hover {
@@ -168,11 +199,9 @@ img {
 .card {
   position: relative;
   margin-bottom: 1rem;
-  &__body {
-      
-  }
-  &__image{
-      max-width: 100%;
+
+  &__image {
+    max-width: 100%;
   }
   &:hover .overlay {
     opacity: 1;
@@ -201,8 +230,6 @@ img {
       font-size: 3rem;
     }
   }
-  &__body {
-  }
   &__btn {
     margin-top: 1rem;
     &-link {
@@ -218,16 +245,26 @@ img {
 }
 
 .social {
-    &__head{
-        margin-bottom: 1rem;
-        &-title{
-            font-size: 2.2rem;
-        }
+  &__head {
+    margin-bottom: 1rem;
+    &-title {
+      font-size: 2.2rem;
     }
-    &__body {
-        display: flex;
-        flex-direction: column;
-        flex-justify: center;
-        align-item: center;
-    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@keyframes down-to-top {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
